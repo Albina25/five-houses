@@ -23,11 +23,11 @@
     "resolveJsonModule": true,
     "lib": ["esnext", "DOM"],
     "types": ["vite/client"],
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", ".env", "firebase.ts", "vite-env.d.ts"],
   "exclude": ["node_modules"]
 }

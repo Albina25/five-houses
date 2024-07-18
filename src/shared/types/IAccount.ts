@@ -1,5 +1,5 @@
 export interface IAccount {
-  id: number;
-  login: string;
-  password: string;
+  id?: number;
+  email?: string;
+  token?: string;
 }

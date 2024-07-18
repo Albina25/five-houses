@@ -1,9 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { orderReducer } from "@/store/slices/OrderSlice";
+import { accountReducer } from "@/store/slices/AccountSlice";
 import { orderApi } from "@/shared/services/OrderServices";
 
 const rootReducer = combineReducers({
   orderReducer,
+  accountReducer,
   [orderApi.reducerPath]: orderApi.reducer,
 });
 

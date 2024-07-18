@@ -5,10 +5,6 @@ import AdminRoutes from "./components/AdminRoutes";
 const AdminApp: React.FC = () => {
   return (
     <>
-      <div>
-        <Link to="/admin/dashboard">Dashboard</Link>
-        <Link to="/admin/orders">Orders</Link>
-      </div>
       <AdminRoutes />
     </>
   );
