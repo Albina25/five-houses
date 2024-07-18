@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import AdminRoutes from "./components/AdminRoutes";
 
 const AdminApp: React.FC = () => {
-  console.log("AdminApp rendered");
   return (
     <>
       <div>

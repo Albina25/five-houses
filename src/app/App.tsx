@@ -1,6 +1,7 @@
+import React from "react";
 import "./App.css";
-import AdminApp from "../admin/AdminApp";
-import UserApp from "../user/UserApp";
+import AdminApp from "../modules/admin/AdminApp";
+import UserApp from "../modules/user/UserApp";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
