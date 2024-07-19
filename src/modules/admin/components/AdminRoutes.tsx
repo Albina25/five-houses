@@ -1,9 +1,9 @@
-import React from "react";
-import { Link, Navigate, Route, Routes, useActionData } from "react-router-dom";
-import { privateRoutes, publicRoutes } from "../router";
-import { useAuth } from "../../../shared/hooks/useAuth";
-import { useActions } from "../../../shared/hooks/redux";
-import { accountActions } from "../../../store/slices/AccountSlice";
+import React from 'react';
+import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import { privateRoutes, publicRoutes } from '../router';
+import { useAuth } from '../../../shared/hooks/useAuth';
+import { useActions } from '../../../shared/hooks/redux';
+import { accountActions } from '../../../store/slices/AccountSlice';
 
 const AdminRoutes = () => {
   const { isAuth } = useAuth();
@@ -35,7 +35,5 @@ const AdminRoutes = () => {
     </Routes>
   );
 };
-
-//AdminRoutes.propTypes = {};
 
 export default AdminRoutes;

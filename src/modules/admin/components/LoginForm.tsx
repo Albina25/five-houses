@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-//import PropTypes from "prop-types";
+import React, { useState } from 'react';
 
-const LoginForm = ({ handleClick }) => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
+interface LoginFormProps {
+  handleClick: (login: string, password: string) => void;
+}
+
+const LoginForm: React.FC<LoginFormProps> = ({ handleClick }) => {
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -28,7 +31,5 @@ const LoginForm = ({ handleClick }) => {
     </form>
   );
 };
-
-//LoginForm.propTypes = {};
 
 export default LoginForm;

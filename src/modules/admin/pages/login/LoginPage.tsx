@@ -1,13 +1,12 @@
-//import PropTypes from "prop-types";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import LoginForm from "../../components/LoginForm";
-import { useActions } from "@/shared/hooks/redux";
-import { accountActions } from "@/store/slices/AccountSlice";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import LoginForm from '../../components/LoginForm';
+import { useActions } from '@/shared/hooks/redux';
+import { accountActions } from '@/store/slices/AccountSlice';
 
 const LoginPage = () => {
   const { setAccount } = useActions(accountActions);
   const handleClick = (login: string, password: string) => {
-    console.log("login");
+    console.log('login');
     const auth = getAuth();
     signInWithEmailAndPassword(auth, login, password)
       .then(({ user }) => {
@@ -28,7 +27,5 @@ const LoginPage = () => {
     </div>
   );
 };
-
-//LoginPage.propTypes = {};
 
 export default LoginPage;

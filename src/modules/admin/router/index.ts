@@ -1,14 +1,19 @@
-import DashboardPage from "../pages/dashboard/DashboardPage";
-import LoginPage from "../pages/login/LoginPage";
-import OrderPage from "../pages/orders/OrdersPage";
-import RegisterPage from "../pages/register/RegisterPage";
+import DashboardPage from '../pages/dashboard/DashboardPage';
+import LoginPage from '../pages/login/LoginPage';
+import OrderPage from '../pages/orders/OrdersPage';
+import RegisterPage from '../pages/register/RegisterPage';
+import {
+  LOGIN_ROUTE,
+  DASHBOARD_ROUTE,
+  ORDERS_ROUTE,
+} from '@/shared/utils/constants';
 
 export const privateRoutes = [
-  { path: "/dashboard", element: DashboardPage, end: true },
-  { path: "/orders", element: OrderPage, end: true },
+  { path: DASHBOARD_ROUTE, element: DashboardPage, end: true },
+  { path: ORDERS_ROUTE, element: OrderPage, end: true },
 ];
 
 export const publicRoutes = [
-  { path: "/login", element: LoginPage, end: true },
-  { path: "/register", element: RegisterPage, end: true },
+  { path: LOGIN_ROUTE, element: LoginPage, end: true },
+  { path: '/register', element: RegisterPage, end: true },
 ];
