@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IOrder } from "@/shared/types/IOrder";
+import { createSlice } from '@reduxjs/toolkit';
+import { IOrder } from '@/shared/types/IOrder';
 
 interface orderState {
   order: IOrder[];
@@ -10,13 +10,18 @@ interface orderState {
 const initialState: orderState = {
   order: [],
   isLoading: false,
-  error: "",
+  error: '',
 };
 
 export const orderSlice = createSlice({
-  name: "order",
+  name: 'order',
   initialState,
-  reducers: {},
+  reducers: {
+    setAllOrdersInState(state, action) {
+      console.log({ state, action });
+      state.order = action.payload;
+    },
+  },
 });
 
 export const { reducer: orderReducer, actions: orderActions } = orderSlice;

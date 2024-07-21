@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { IAccount } from "@/shared/types/IAccount";
+import { createSlice } from '@reduxjs/toolkit';
+import { IAccount } from '@/shared/types/IAccount';
 
 interface accountState {
   account: IAccount;
@@ -10,15 +10,15 @@ interface accountState {
 const initialState: accountState = {
   account: {
     id: undefined,
-    email: "",
-    token: "",
+    email: '',
+    token: '',
   },
   isLoading: false,
-  error: "",
+  error: '',
 };
 
 export const accountSlice = createSlice({
-  name: "account",
+  name: 'account',
   initialState,
   reducers: {
     setAccount(state, action) {
@@ -28,10 +28,10 @@ export const accountSlice = createSlice({
       state.account.email = action.payload.id;
       state.account.token = action.payload.token;
     },
-    removeAccount(state, action) {
+    removeAccount(state) {
       state.account.id = undefined;
-      state.account.email = "";
-      state.account.token = "";
+      state.account.email = '';
+      state.account.token = '';
     },
   },
 });

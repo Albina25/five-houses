@@ -6,8 +6,10 @@ import { useActions } from '../../../shared/hooks/redux';
 import { accountActions } from '../../../store/slices/AccountSlice';
 
 const AdminRoutes = () => {
-  const { isAuth } = useAuth();
+  //const { isAuth } = useAuth();
+  const isAuth = true;
   const { removeAccount } = useActions(accountActions);
+
   return isAuth ? (
     <>
       <div>
